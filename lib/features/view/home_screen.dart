@@ -20,7 +20,20 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: Icon(Icons.notifications_outlined),
+            child: Badge(
+              textColor: Color(0xFF0029FF),
+              backgroundColor: Color(0xFF0029FF),
+              label: Text(
+                '02',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12,
+                ),
+              ),
+              child: Icon(
+                Icons.notifications_outlined,
+              ),
+            ),
           ),
         ],
         leading: Row(
