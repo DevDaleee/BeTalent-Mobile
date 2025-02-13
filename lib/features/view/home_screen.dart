@@ -62,12 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Expanded(
-                      flex: 0,
-                      child: EmployeesList(
-                        employees: viewModel.employees,
-                        expanded: isExpanded,
-                      ),
+                    child: EmployeesList(
+                      employees: viewModel.employees,
+                      expanded: isExpanded,
                     ),
                   )
                 ],
