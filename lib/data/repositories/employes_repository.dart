@@ -3,15 +3,15 @@ import 'package:betalent/data/models/employers.dart';
 import 'package:dio/dio.dart';
 
 class EmployesRepository {
-  final Dio dio = Dio(
-    BaseOptions(
-      baseUrl: ApiConstants.basePath,
-    ),
-  );
-
-  Future<List<EmployersModel>> fetchEmployees() async {
+  Future<List<EmployersModel>> fetchEmployees(String platform) async {
     try {
-      final response = await dio.get('employees');
+      final response = await Dio(
+        BaseOptions(
+          baseUrl: platform == 'iOS'
+              ? ApiConstants.basePathIos
+              : ApiConstants.basePathAndroid,
+        ),
+      ).get('employees');
       if (response.statusCode == 200) {
         final List<dynamic> data = response.data;
         return data.map((json) => EmployersModel.fromJson(json)).toList();

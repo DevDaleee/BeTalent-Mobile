@@ -44,39 +44,4 @@ class AppTheme {
       textTheme: ButtonTextTheme.primary,
     ),
   );
-
-  static ThemeData darkTheme = ThemeData(
-    fontFamily: 'Helvica',
-    brightness: Brightness.dark,
-    primaryColor: bluePrimary,
-    scaffoldBackgroundColor: blackNeutral,
-    appBarTheme: AppBarTheme(
-      backgroundColor: blackNeutral,
-      elevation: 0,
-      iconTheme: IconThemeData(color: whiteNeutral),
-      titleTextStyle: TextStyle(
-        color: whiteNeutral,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    colorScheme: ColorScheme.dark(
-      primary: bluePrimary,
-      secondary: blue10,
-      surface: gray10,
-      onPrimary: whiteNeutral,
-      onSecondary: blackNeutral,
-      onSurface: whiteNeutral,
-      onError: blackNeutral,
-    ),
-    textTheme: TextTheme(
-      bodyLarge: TextStyle(color: whiteNeutral),
-      bodyMedium: TextStyle(color: gray10),
-      bodySmall: TextStyle(color: gray20),
-    ),
-    buttonTheme: ButtonThemeData(
-      buttonColor: bluePrimary,
-      textTheme: ButtonTextTheme.primary,
-    ),
-  );
 }

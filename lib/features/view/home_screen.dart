@@ -62,9 +62,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: EmployeesList(
-                      employees: viewModel.employees,
-                      expanded: isExpanded,
+                    child: Column(
+                      children: [
+                        EmployeesList(
+                          employees: viewModel.employees,
+                        ),
+                        if (isExpanded == true)
+                          SizedBox(
+                            height: 150,
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [],
+                                ),
+                                Row(
+                                  children: [],
+                                ),
+                                Row(
+                                  children: [],
+                                )
+                              ],
+                            ),
+                          )
+                      ],
                     ),
                   )
                 ],

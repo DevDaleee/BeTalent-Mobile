@@ -23,7 +23,7 @@ class EmployersModel {
       name: json['name'] as String?,
       role: json['job'] as String?,
       addmissionDate: Formatters.formatDate(json['admission_date']),
-      phone: json['phone'] as String?,
+      phone: Formatters.fromatPhoneNumber(json['phone']),
       profileImageUrl: json['image'] as String?,
     );
   }
